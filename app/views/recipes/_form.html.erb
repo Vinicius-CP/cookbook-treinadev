@@ -1,0 +1,17 @@
+<%= form_for @recipe do |f| %>
+    <%= f.label :title  %>
+    <%= f.text_field :title %>
+    <%= f.label :recipe_type  %>
+    <%= f.text_field :recipe_type %>
+    <%= f.label :cuisine %>
+    <%= f.text_field :cuisine %>
+    <%= f.label :difficulty %>
+    <%= f.text_field :difficulty %>
+    <%= f.label :cook_time %>
+    <%= f.number_field :cook_time %>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients  %>
+    <%= f.label :cook_method %>
+    <%= f.text_area :cook_method  %>
+    <%= f.submit 'Enviar' %>
+<% end %>
