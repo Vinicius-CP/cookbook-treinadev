@@ -38,6 +38,6 @@ feature 'User register recipe' do
         fill_in 'Método de preparo', with: 'Adicione tomate, alface, cebola, um pouco de sal e vinagre'
         click_on 'Enviar'
 
-        expect(page).to have_content('Os campos devem ser preenchidos') 
+        expect(page).to have_content('Título não pode ficar em branco') 
     end
 end 
