@@ -15,3 +15,14 @@
     <%= f.text_area :cook_method  %>
     <%= f.submit 'Enviar' %>
 <% end %>
+
+
+<% if @recipe.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+    <% @recipe.errors.full_messages.each do |message| %>
+      <li> <%= message %>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
