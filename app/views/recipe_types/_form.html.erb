@@ -3,3 +3,13 @@
     <%= f.text_field :name %>
     <%= f.submit %>
 <% end %>
+
+<% if @recipe_type.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+    <% @recipe_type.errors.full_messages.each do |message| %>
+      <li> <%= message %>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
