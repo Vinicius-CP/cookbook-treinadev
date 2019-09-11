@@ -2,6 +2,7 @@ pt-BR:
   activerecord:
     models:
       recipe: Receita
+      recipe_type: Tipo da Receita
     attributes:
       recipe:
         title: Título
@@ -11,3 +12,5 @@ pt-BR:
         cook_time: Tempo de preparo
         ingredients: Ingredientes
         cook_method: Método de preparo
+      recipe_type:
+        name: Tipo da receita

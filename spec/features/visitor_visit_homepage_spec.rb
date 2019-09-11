@@ -11,7 +11,6 @@ feature 'Visitor visit homepage' do
   scenario 'and view recipe' do
     #cria os dados necessários
     recipe = create(:recipe)
-
     # simula a ação do usuário
     visit root_path
 
