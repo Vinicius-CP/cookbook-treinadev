@@ -13,7 +13,7 @@ feature 'User register recipe' do
         fill_in 'Tempo de preparo', with: '15'
         fill_in 'Ingredientes', with: 'Tomate, alface, cebola e vinagre'
         fill_in 'Método de preparo', with: 'Adicione tomate, alface, cebola, um pouco de sal e vinagre'
-        click_on 'Enviar'
+        click_on 'Criar Receita'
 
         expect(page).to have_css('h1', text: 'Vinagrete')
         expect(page).to have_css('p', text: 'Salada')
@@ -36,7 +36,7 @@ feature 'User register recipe' do
         fill_in 'Tempo de preparo', with: '15'
         fill_in 'Ingredientes', with: 'Tomate, alface, cebola e vinagre'
         fill_in 'Método de preparo', with: 'Adicione tomate, alface, cebola, um pouco de sal e vinagre'
-        click_on 'Enviar'
+        click_on 'Criar Receita'
 
         expect(page).to have_content('Título não pode ficar em branco') 
     end
