@@ -27,4 +27,23 @@ feature 'User edit recipe' do
         expect(page).to have_content('Receita atualizada com sucesso!')   
 
     end
+
+    scenario 'and must fill in all fields' do
+        recipe = create(:recipe)
+
+        visit root_path
+        click_on recipe.title
+        click_on 'Editar'
+
+        fill_in 'Título', with: ''
+        fill_in 'Tipo da receita', with: 'Salada'
+        fill_in 'Cozinha', with: 'Brasileira'
+        fill_in 'Dificuldade', with: 'Fácil'
+        fill_in 'Tempo de preparo', with: '15'
+        fill_in 'Ingredientes', with: 'Tomate, alface, cebola e vinagre'
+        fill_in 'Método de preparo', with: 'Adicione tomate, alface, cebola, um pouco de sal e vinagre'
+        click_on 'Atualizar Receita'
+
+        expect(page).to have_content('Título não pode ficar em branco') 
+    end
 end
