@@ -6,7 +6,7 @@ pt-BR:
     attributes:
       recipe:
         title: Título
-        recipe_type: Tipo da receita
+        recipe_type_id: Tipo de receita
         cuisine: Cozinha
         difficulty: Dificuldade
         cook_time: Tempo de preparo
