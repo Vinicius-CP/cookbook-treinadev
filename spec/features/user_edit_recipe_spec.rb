@@ -9,7 +9,7 @@ feature 'User edit recipe' do
         click_on 'Editar'
 
         fill_in 'Título', with: 'Vinagrete clássico'
-        fill_in 'Tipo da receita', with: 'Salada'
+        fill_in 'Tipo de receita', with: 'Salada'
         fill_in 'Cozinha', with: 'Brasileira'
         fill_in 'Dificuldade', with: 'Fácil'
         fill_in 'Tempo de preparo', with: '15'
@@ -36,7 +36,7 @@ feature 'User edit recipe' do
         click_on 'Editar'
 
         fill_in 'Título', with: ''
-        fill_in 'Tipo da receita', with: 'Salada'
+        fill_in 'Tipo de receita', with: 'Salada'
         fill_in 'Cozinha', with: 'Brasileira'
         fill_in 'Dificuldade', with: 'Fácil'
         fill_in 'Tempo de preparo', with: '15'
