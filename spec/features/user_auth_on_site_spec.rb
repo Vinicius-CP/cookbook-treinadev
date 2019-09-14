@@ -15,11 +15,7 @@ feature 'User authenticates to the site' do
 
         expect(current_path).to eq (root_path)
         expect(page).not_to have_link('Entrar')
-        expect(page).to have_content('Sair')
+        expect(page).to have_link('Sair')
 
     end
-
-    #scenario 'successfully log out' do
-
-    #end
 end
