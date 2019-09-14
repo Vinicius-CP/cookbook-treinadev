@@ -16,6 +16,17 @@ feature 'User authenticates to the site' do
         expect(current_path).to eq (root_path)
         expect(page).not_to have_link('Entrar')
         expect(page).to have_link('Sair')
+    end
 
+    scenario 'successfully log out' do
+        user = create(:user)
+        login_as(user, :scope => :user)
+
+        visit root_path
+        click_on 'Sair'
+
+        expect(current_path).to eq(root_path)
+        expect(page).not_to have_link('Sair')
+        expect(page).to have_link('Entrar')
     end
 end
