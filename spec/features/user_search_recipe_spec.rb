@@ -38,8 +38,8 @@ feature 'User search recipe' do
         fill_in 'Buscar', with: 'Salada'
         click_on 'Pesquisar receita'
 
-        expect(page).to have_css('h1', text: 'Salada Light')
-        expect(page).to have_css('h1', text: 'Salada Gourmet')
-        expect(page).not_to have_content('Macarronada')
+        expect(page).to have_css('h1', text: recipe.title)
+        expect(page).to have_css('h1', text: other_recipe.title)
+        expect(page).not_to have_content(another_recipe.title)
     end
 end
