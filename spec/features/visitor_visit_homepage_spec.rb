@@ -25,9 +25,10 @@ feature 'Visitor visit homepage' do
 
   scenario 'and view recipes list' do
     #cria os dados necessários
+    user = create(:user, email: 'natan@email.com')
     recipe = create(:recipe)
     recipe_type = create(:recipe_type, name: 'Saladas')
-    another_recipe = create(:recipe, recipe_type: recipe_type)
+    another_recipe = create(:recipe, recipe_type: recipe_type, user: user)
 
     # simula a ação do usuário
     visit root_path

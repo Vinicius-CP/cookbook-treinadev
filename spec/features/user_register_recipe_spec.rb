@@ -2,8 +2,10 @@ require 'rails_helper'
 
 feature 'User register recipe' do
     scenario 'successfully' do
+        user = create(:user)
         recipe_type = create(:recipe_type)
-
+        login_as(user, :scope => :user)
+        
         visit root_path
         click_on 'Cadastrar receita'
 
