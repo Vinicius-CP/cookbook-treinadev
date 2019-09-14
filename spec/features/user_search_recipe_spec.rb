@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User search recipe' do
-    scenario 'sucessfully' do
+    scenario 'successfully' do
         recipe_type = create(:recipe_type, name: 'Veggie')
         recipe = create(:recipe, recipe_type: recipe_type)
         other_recipe = create(:recipe, title: 'Salada Light')
