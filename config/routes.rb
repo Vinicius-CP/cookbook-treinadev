@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :recipe_types, only: %i[show new create]
 
   get 'search', to: 'recipes#search'
+  get 'myrecipes', to: 'recipes#myrecipes'
 end

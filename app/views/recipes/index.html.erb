@@ -23,6 +23,7 @@
 
 <% if user_signed_in? %>
   <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+  <%= link_to 'Minhas receitas', myrecipes_path %>
 <% else %>
   <%= link_to 'Entrar', new_user_session_path %>
 <% end %>

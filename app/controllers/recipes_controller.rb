@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :find_id, only: %i[show edit update]
+  before_action :authenticate_user!, only: %i[myrecipes]
 
   def index
     @recipes = Recipe.all
@@ -40,6 +41,14 @@ class RecipesController < ApplicationController
       flash[:notice] = 'Não foi possível encontrar a receita'
       redirect_to root_path
     end
+  end
+
+  def myrecipes
+    if current_user.recipes.empty?
+      flash[:notice] = 'Você ainda não possui nenhuma receita'
+      redirect_to root_path
+    end
+    @recipes = Recipe.where(user: current_user)
   end
 
   private
