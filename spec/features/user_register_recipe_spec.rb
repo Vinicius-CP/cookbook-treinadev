@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'User register recipe' do
     scenario 'successfully' do
-
         recipe_type = create(:recipe_type)
 
         visit root_path
@@ -30,6 +29,7 @@ feature 'User register recipe' do
 
     scenario 'and must fill in all fields' do
         recipe_type = create(:recipe_type)
+        
         visit root_path
         click_on 'Cadastrar receita'
 
