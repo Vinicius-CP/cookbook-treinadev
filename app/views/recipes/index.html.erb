@@ -13,3 +13,10 @@
 
 <%= link_to 'Cadastrar receita', new_recipe_path %>
 <%= link_to 'Cadastrar tipo da receita', new_recipe_type_path %>
+
+<%= flash[:notice] %>
+<%= form_tag(search_path, method: "get") do %>
+  <%= label_tag(:search, "Buscar") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Pesquisar receita") %>
+<% end %>
