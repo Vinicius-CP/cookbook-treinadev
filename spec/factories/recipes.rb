@@ -9,5 +9,6 @@ FactoryBot.define do
              
         recipe_type
         user
+        recipe_list
     end
 end

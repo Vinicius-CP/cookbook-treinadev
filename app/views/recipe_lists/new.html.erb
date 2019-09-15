@@ -1,0 +1,7 @@
+<h3>Criar Lista de Receita</h3>
+
+<%= form_for @recipe_list do |f| %>
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+    <%= f.submit 'Criar Lista de Receita' %>
+<% end %>

@@ -3,6 +3,7 @@ pt-BR:
     models:
       recipe: Receita
       recipe_type: Tipo da Receita
+      recipe_list: Lista de Receita
     attributes:
       recipe:
         title: Título
@@ -14,3 +15,5 @@ pt-BR:
         cook_method: Método de preparo
       recipe_type:
         name: Tipo de receita
+      recipe_list:
+        name: Nome
