@@ -2,7 +2,9 @@ require 'rails_helper'
 
 feature 'User edit recipe' do
     scenario 'successfully' do
-        recipe = create(:recipe)
+        user = create(:user)
+        recipe = create(:recipe, user: user)
+        login_as(user, :scope => :user)
 
         visit root_path
         click_on recipe.title
@@ -29,8 +31,10 @@ feature 'User edit recipe' do
     end
 
     scenario 'and must fill in all fields' do
-        recipe = create(:recipe)
-
+        user = create(:user)
+        recipe = create(:recipe, user: user)
+        login_as(user, :scope => :user)
+        
         visit root_path
         click_on recipe.title
         click_on 'Editar'

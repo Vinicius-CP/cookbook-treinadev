@@ -30,7 +30,9 @@ feature 'User register recipe' do
     end
 
     scenario 'and must fill in all fields' do
+        user = create(:user)
         recipe_type = create(:recipe_type)
+        login_as(user, :scope => :user)
         
         visit root_path
         click_on 'Cadastrar receita'

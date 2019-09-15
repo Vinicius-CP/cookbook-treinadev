@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :find_id, only: %i[show edit update]
-  before_action :authenticate_user!, only: %i[myrecipes]
+  before_action :authenticate_user!, only: %i[new create edit update myrecipes]
 
   def index
     @recipes = Recipe.all
