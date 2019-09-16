@@ -8,4 +8,12 @@ Rails.application.routes.draw do
 
   get 'search', to: 'recipes#search'
   get 'myrecipes', to: 'recipes#myrecipes'
+
+
+  namespace :api do
+    namespace :v1 do
+      resources :recipes
+    end
+  end
+
 end

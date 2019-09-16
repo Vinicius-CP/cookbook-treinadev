@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User add recipes on recipe list' do
+xfeature 'User add recipes on recipe list' do
     scenario 'successfully' do
         user = create(:user)
         recipe_list = create(:recipe_list, user: user)
